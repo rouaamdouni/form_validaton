@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form-input {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+      .form {
+        width: 500px;
+      }
+      #nom-error{
+          color:red;
+      }
+      #prenom-error{
+        color:red;
+      }
+      #email-error1{
+        color:red;
+      }
+      #email-error2{
+        color:red;
+      }
+      #number-error{
+        color:red;
+      }
+      #cin-error{
+        color:red;
+      }
+      #gender-error{
+        color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>تجديد بطاقة تعريف وطنية</h1>
+    <form method="POST" action="" id="form">
+      <div class="form-input">
+        <label for="nom">nom</label>
+        <span id="nom-error"></span>
+        <input id="nom" name="nom" maxlength="8" type="text" value="" placeholder="" />
+      </div>
+      <div class="form-input">
+        <label for="prenom">prenom</label>
+        <span id="prenom-error"></span>
+        <input id="prenom" name="prenom" type="text" value="" placeholder="" />
+      </div>
+      <div class="form-input">
+        <label for="email">email</label>
+        <span id="email-error1"></span>
+        <span id="email-error2"></span>
+        <input id="email" type="text" value="" placeholder="" />
+      </div>
+      <div class="form-input">
+        <label for="phone">phone</label>
+        <span id="number-error"></span>
+        <input id="phone"  min="0" max="8" type="number" value="" placeholder="" />
+      </div>
+      <div class="form-input">
+        <label for="date">date</label>
+        <input id="date"  min="0" max="10" type="date" value="2022-04-03" placeholder="" />
+      </div>
+      <div class="form-input">
+        <label for="cin">old cin number</label>
+        <span id="cin-error"></span>
+        <input id="cin"   min="100000" max="15999999" type="number" value="" placeholder="exemple : 00000000" />
+      </div>
+      <div class="form-input">
+        <label for="copiecin">copie old cin</label>
+        <input id="copiecin"   type="file" value="" placeholder="" />
+      </div>
+      <div class="form-input">
+        <label for="sexe">sexe</label>
+        <span id="gender-error"></span>
+        male<input id="male" name="sexe" type="radio"  value="m">
+        female<input id="female" name="sexe" type="radio" value="f">
+      </div>
+      <div class="form-input">
+        <label for="datelivraison">date livraison</label>
+        <select name="" id="datelivraison" >
+            <option value="1j">1 jours</option>
+            <option value="2j" selected>2 jours</option>
+            <option value="1s">1 semaine</option>
+        </select>
+    </div>
+      <div class="form-input">
+        <input type="submit" value="submit" />
+      </div>
+    </form>
+  </body>
+  <script src="form-validation.js"></script>
+</html>
